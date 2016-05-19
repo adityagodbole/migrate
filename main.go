@@ -15,8 +15,11 @@ import (
 	"github.com/gemnasium/migrate/migrate"
 	"github.com/gemnasium/migrate/migrate/direction"
 	pipep "github.com/gemnasium/migrate/pipe"
+
+	"github.com/gemnasium/migrate/driver/bash"
 )
 
+var bashDriver bash.Driver
 var url = flag.String("url", os.Getenv("MIGRATE_URL"), "")
 var migrationsPath = flag.String("path", "", "")
 var version = flag.Bool("version", false, "Show migrate version")
