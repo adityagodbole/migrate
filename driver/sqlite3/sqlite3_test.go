@@ -5,9 +5,9 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/gemnasium/migrate/file"
-	"github.com/gemnasium/migrate/migrate/direction"
-	pipep "github.com/gemnasium/migrate/pipe"
+	"github.com/adityagodbole/migrate/file"
+	"github.com/adityagodbole/migrate/migrate/direction"
+	pipep "github.com/adityagodbole/migrate/pipe"
 )
 
 // TestMigrate runs some additional tests on Migrate()
