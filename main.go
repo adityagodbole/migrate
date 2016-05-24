@@ -1,6 +1,6 @@
 // Package main is the CLI.
 // You can use the CLI via Terminal.
-// import "github.com/gemnasium/migrate/migrate" for usage within Go.
+// import "github.com/adityagodbole/migrate/migrate" for usage within Go.
 package main
 
 import (
@@ -11,12 +11,15 @@ import (
 	"time"
 
 	"github.com/fatih/color"
-	"github.com/gemnasium/migrate/file"
-	"github.com/gemnasium/migrate/migrate"
-	"github.com/gemnasium/migrate/migrate/direction"
-	pipep "github.com/gemnasium/migrate/pipe"
+	"github.com/adityagodbole/migrate/file"
+	"github.com/adityagodbole/migrate/migrate"
+	"github.com/adityagodbole/migrate/migrate/direction"
+	pipep "github.com/adityagodbole/migrate/pipe"
+
+	"github.com/adityagodbole/migrate/driver/bash"
 )
 
+var bashDriver bash.Driver
 var url = flag.String("url", os.Getenv("MIGRATE_URL"), "")
 var migrationsPath = flag.String("path", "", "")
 var version = flag.Bool("version", false, "Show migrate version")
